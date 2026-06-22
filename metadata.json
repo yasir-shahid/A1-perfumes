@@ -1,0 +1,6 @@
+{
+  "name": "A-ONE LUXURY FRAGRANCE",
+  "description": "Savor timeless elegance with A-ONE LUXURY FRAGRANCE—offering premium traditional Indian Attars and luxury perfumes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
