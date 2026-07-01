@@ -201,7 +201,6 @@ export default function OrderForm({ selectedAttarName, setSelectedAttarName }: O
           <p className="text-cream/70 text-xs sm:text-sm mt-3 font-light leading-relaxed">
             Pure botanical attars react uniquely to your physical body heat and skin oils. To experience their true dry-down and royal transition, we invite you to our physical counter. Let us host you for a private, personalized consultation.
           </p>
-          <div className="w-16 h-[1px] bg-gold/30 mx-auto mt-4 px-2 text-rose-500 font-mono text-[10px] tracking-widest uppercase">Visit-Only Boutique — No shipping</div>
         </div>
 
         {/* Form panel container */}
@@ -357,11 +356,6 @@ export default function OrderForm({ selectedAttarName, setSelectedAttarName }: O
                           </option>
                         ))}
                         <option value="Not Sure - Need Guidance" className="bg-luxury-black text-white">✦ Let Scent Profilist Guide Me (Not Sure)</option>
-                      </optgroup>
-                      <optgroup label="Gift Bundles & Sets" className="bg-luxury-black text-gold">
-                        <option value="BUNDLE: Royal Shahi Bouquet" className="bg-luxury-black text-white">BUNDLE: Royal Shahi Bouquet</option>
-                        <option value="BUNDLE: Duo Seduction (Couples Set)" className="bg-luxury-black text-white">BUNDLE: Duo Seduction (Couples Set)</option>
-                        <option value="BUNDLE: A-ONE Sovereign Trilogy Set" className="bg-luxury-black text-white">BUNDLE: A-ONE Sovereign Trilogy Set</option>
                       </optgroup>
                     </select>
                     {errors.selectedAttar && (

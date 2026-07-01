@@ -201,6 +201,7 @@ export default function ScentQuiz({ onSelectAttar }: QuizProps) {
                     <img
                       src={resultAttar.imagePath}
                       alt={resultAttar.name}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />

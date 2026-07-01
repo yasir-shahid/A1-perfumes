@@ -3,22 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import LuxuryStats from './components/LuxuryStats';
-import ScentQuiz from './components/ScentQuiz';
-import AttarCollection from './components/AttarCollection';
-import GiftBundles from './components/GiftBundles';
-import Testimonials from './components/Testimonials';
-import ScentGuide from './components/ScentGuide';
-import OrderForm from './components/OrderForm';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
-import CustomCursor from './components/CustomCursor';
+// CustomCursor disabled for performance optimization
+// import CustomCursor from './components/CustomCursor';
 import WhatsAppWidget from './components/WhatsAppWidget';
+
+// Lazy load heavy components for better performance
+const About = lazy(() => import('./components/About'));
+const LuxuryStats = lazy(() => import('./components/LuxuryStats'));
+const ScentQuiz = lazy(() => import('./components/ScentQuiz'));
+const AttarCollection = lazy(() => import('./components/AttarCollection'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const ScentGuide = lazy(() => import('./components/ScentGuide'));
+const OrderForm = lazy(() => import('./components/OrderForm'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 export default function App() {
   const [selectedAttarName, setSelectedAttarName] = useState<string>('');
@@ -34,8 +36,8 @@ export default function App() {
 
   return (
     <div id="luxury-app-wrapper" className="min-h-screen bg-luxury-black text-cream selection:bg-gold selection:text-black antialiased">
-      {/* Luxury Trailing Cursor for Desktop */}
-      <CustomCursor />
+      {/* Luxury Trailing Cursor for Desktop - DISABLED for performance */}
+      {/* <CustomCursor /> */}
 
       {/* Cinematic animated logo reveal on first visit */}
       <LoadingScreen />
@@ -49,38 +51,53 @@ export default function App() {
         <Hero />
 
         {/* Brand Lore / About Indian Attars */}
-        <About />
+        <Suspense fallback={<div className="h-64 flex items-center justify-center text-gold">Loading...</div>}>
+          <About />
+        </Suspense>
 
         {/* Luxury Trust Indicators & Stat Counters */}
-        <LuxuryStats />
+        <Suspense fallback={<div className="h-32 flex items-center justify-center text-gold">Loading...</div>}>
+          <LuxuryStats />
+        </Suspense>
 
         {/* Interactive Matchmaking Questionnaire */}
-        <ScentQuiz onSelectAttar={handleSelectAttar} />
+        <Suspense fallback={<div className="h-64 flex items-center justify-center text-gold">Loading...</div>}>
+          <ScentQuiz onSelectAttar={handleSelectAttar} />
+        </Suspense>
 
         {/* Premium Products Showcase */}
-        <AttarCollection onSelectAttar={handleSelectAttar} />
-
-        {/* Curated Gifting Box Bundles */}
-        <GiftBundles onSelectAttar={handleSelectAttar} />
+        <Suspense fallback={<div className="h-96 flex items-center justify-center text-gold">Loading...</div>}>
+          <AttarCollection onSelectAttar={handleSelectAttar} />
+        </Suspense>
 
         {/* Social Proof / Testimonials for luxury validity */}
-        <Testimonials />
+        <Suspense fallback={<div className="h-64 flex items-center justify-center text-gold">Loading...</div>}>
+          <Testimonials />
+        </Suspense>
 
         {/* Art of wearing, storage & perfume vs oil comparisons */}
-        <ScentGuide />
+        <Suspense fallback={<div className="h-64 flex items-center justify-center text-gold">Loading...</div>}>
+          <ScentGuide />
+        </Suspense>
 
         {/* Highly Interactive Booking & Secure Validation Order Desk */}
-        <OrderForm
-          selectedAttarName={selectedAttarName}
-          setSelectedAttarName={setSelectedAttarName}
-        />
+        <Suspense fallback={<div className="h-96 flex items-center justify-center text-gold">Loading...</div>}>
+          <OrderForm
+            selectedAttarName={selectedAttarName}
+            setSelectedAttarName={setSelectedAttarName}
+          />
+        </Suspense>
 
         {/* Interactive Boutique contact cards and detailed map layout */}
-        <Contact />
+        <Suspense fallback={<div className="h-64 flex items-center justify-center text-gold">Loading...</div>}>
+          <Contact />
+        </Suspense>
       </main>
 
       {/* Elegant Copyright and Social Footer layout */}
-      <Footer />
+      <Suspense fallback={<div className="h-32 flex items-center justify-center text-gold">Loading...</div>}>
+        <Footer />
+      </Suspense>
 
       {/* Floating persistent support widget */}
       <WhatsAppWidget />

@@ -22,7 +22,6 @@ export default function Header() {
     { name: 'Heritage', href: '#about' },
     { name: 'Finder', href: '#quiz' },
     { name: 'The Collection', href: '#collection' },
-    { name: 'Gift Sets', href: '#bundles' },
     { name: 'Scent Guide', href: '#guide' },
     { name: 'Book Session', href: '#order' }
   ];
@@ -46,8 +45,9 @@ export default function Header() {
           >
             <div className="logo-wrapper flex-shrink-0">
               <img
-                src="/src/assets/images/aone_official_logo_1779446749622.png"
+                src="/images/aone_official_logo_1779446749622.png"
                 alt="A ONE LUXURY FRAGRANCE"
+                loading="eager"
                 className="logo-img"
                 referrerPolicy="no-referrer"
               />

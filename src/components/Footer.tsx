@@ -14,8 +14,9 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center space-y-3.5">
           <div className="logo-wrapper">
             <img
-              src="/src/assets/images/aone_official_logo_1779446749622.png"
+              src="/images/aone_official_logo_1779446749622.png"
               alt="A ONE LUXURY FRAGRANCE"
+              loading="lazy"
               className="logo-img"
               referrerPolicy="no-referrer"
             />
@@ -80,8 +81,6 @@ export default function Footer() {
           <a href="#quiz" className="hover:text-gold transition-colors">Scent Finder</a>
           <span>•</span>
           <a href="#collection" className="hover:text-gold transition-colors">Collection</a>
-          <span>•</span>
-          <a href="#bundles" className="hover:text-gold transition-colors">Gift Sets</a>
           <span>•</span>
           <a href="#guide" className="hover:text-gold transition-colors">Guide</a>
           <span>•</span>

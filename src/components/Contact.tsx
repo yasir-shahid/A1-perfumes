@@ -161,7 +161,7 @@ export default function Contact() {
                 
                 <iframe
                   title="A-ONE Luxury Fragrance Store Location"
-                  className="w-full h-full filter grayscale contrast-115 brightness-95 opacity-80 hover:opacity-100 hover:filter-none transition-all duration-700"
+                  className="w-full h-full filter contrast-110 brightness-100 opacity-90 hover:opacity-100 transition-all duration-700"
                   src="https://maps.google.com/maps?q=A-1%20Luxury%20Paints,%20MLG%20Road,%20Nalgonda&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   style={{ border: 0 }}
                   allowFullScreen={true}

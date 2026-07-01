@@ -11,7 +11,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'Deep Arabic Heritage',
     description: 'A majestic royal blend heavily enriched with premium deep agarwood resins, warm amber fusion, and rare spices. Loved for its exceptional dry-down and persistent spiritual appeal.',
     prices: { ml3: 130, ml6: 250, ml12: 500 },
-    image: '/src/assets/images/ruh_khus_essence_1779296810684.png',
+    image: '/images/ruh_khus_essence_1779296810684.png',
   },
   {
     sNo: 6,
@@ -21,7 +21,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'Mysterious Rich Oasis',
     description: 'A deeply enchanting oriental leather-oud blend that reveals its multi-layered secrets over hours. Warm, majestic, and highly prestigious fragrance of Kuwaiti royal courts.',
     prices: { ml3: 200, ml6: 400, ml12: 800 },
-    image: '/src/assets/images/hero_attar_perfume_1779296753194.png',
+    image: '/images/hero_attar_perfume_1779296753194.png',
   },
   {
     sNo: 14,
@@ -31,7 +31,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'The King of Creamy Musks',
     description: 'An elite, thick, creamy snow-white musk of supreme concentration. Radiating pure cleanliness, morning freshness, and soft sophisticated luxury that lingers indefinitely.',
     prices: { ml3: 150, ml6: 300, ml12: 600 },
-    image: '/src/assets/images/royal_musk_rijali_1779296769471.png',
+    image: '/images/royal_musk_rijali_1779296769471.png',
   },
   {
     sNo: 15,
@@ -41,7 +41,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'Prestige Sandalwood Symphony',
     description: 'A masterpiece compiling dry native woods, rich sandalwood sap, and luxurious cedarwood undertones. A commanding signature scent of high ambition and status.',
     prices: { ml3: 150, ml6: 300, ml12: 600 },
-    image: '/src/assets/images/jannat_e_zuhr_1779296826760.png',
+    image: '/images/jannat_e_zuhr_1779296826760.png',
   },
   {
     sNo: 19,
@@ -51,7 +51,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'Pristine Powdery Luxury',
     description: 'A delicate yet highly projecting special edition of our pure white musk. Infused with soft floral powdery accords that project an unmatched calming therapeutic aura.',
     prices: { ml3: 150, ml6: 300, ml12: 600 },
-    image: '/src/assets/images/royal_musk_rijali_1779296769471.png', // Re-utilizing the premium white musk imagery
+    image: '/images/royal_musk_rijali_1779296769471.png', // Re-utilizing the premium white musk imagery
   },
   {
     sNo: 23,
@@ -61,7 +61,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'Bespoke Modern Extrait',
     description: 'A brilliant contemporary masterpiece blending sweet metallic saffron threads, fresh-cut cedar, and rich warm ambergris. The ultimate statement of high-end metropolitan charm.',
     prices: { ml3: 130, ml6: 250, ml12: 500 },
-    image: '/src/assets/images/cr7_perfume_1779296789402.png', // Re-utilizing standard premium modern image
+    image: '/images/cr7_perfume_1779296789402.png', // Re-utilizing standard premium modern image
   },
   {
     sNo: 44,
@@ -71,7 +71,7 @@ const PREMIUM_ATTARS_SHOWCASE = [
     tagline: 'The Light Velvet Oud',
     description: 'An outstanding, rare distill combining the profound character of white agarwood with sweet, light undertones of fresh rose-wood. Perfectly clean, majestic and deep.',
     prices: { ml3: 150, ml6: 300, ml12: 600 },
-    image: '/src/assets/images/arba_wardath_luxury_1779296847584.png', // Re-utilizing beautiful crystal display image
+    image: '/images/arba_wardath_luxury_1779296847584.png', // Re-utilizing beautiful crystal display image
   }
 ];
 
@@ -82,10 +82,6 @@ export default function Hero() {
     offset: ["start start", "end start"]
   });
 
-  const yBg1 = useTransform(scrollYProgress, [0, 1], [0, 180]);
-  const yBg2 = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const yText = useTransform(scrollYProgress, [0, 1], [0, -40]);
-  const yImage = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const opacityFade = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
 
   // Slideshow Active Index State
@@ -97,7 +93,7 @@ export default function Hero() {
     if (!isAutoplay) return;
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % PREMIUM_ATTARS_SHOWCASE.length);
-    }, 4500);
+    }, 6000); // Increased from 5000ms to 6000ms to further reduce CPU usage
     return () => clearInterval(interval);
   }, [isAutoplay]);
 
@@ -125,36 +121,36 @@ export default function Hero() {
       className="relative min-h-[95vh] flex items-center justify-center pt-24 pb-16 lg:pb-0 overflow-hidden bg-gradient-to-b from-black via-luxury-black to-black"
     >
       {/* Cinematic Golden Ornaments & Light Shrines - Parallax Layer */}
-      <motion.div 
-        style={{ y: yBg1, opacity: opacityFade, willChange: 'transform' }}
+      <motion.div
+        style={{ opacity: opacityFade, willChange: 'transform' }}
         className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-color-dodge"
       >
-        <div className="absolute top-10 left-10 w-96 h-96 rounded-full bg-[radial-gradient(circle_at_center,rgba(214,175,55,0.15)_0,transparent_75%)] blur-2xl animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-96 h-96 rounded-full bg-[radial-gradient(circle_at_center,rgba(214,175,55,0.15)_0,transparent_75%)] blur-2xl"></div>
         <div className="absolute bottom-10 right-10 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle_at_center,rgba(128,0,32,0.15)_0,transparent_75%)] blur-3xl"></div>
       </motion.div>
 
       {/* Floating Sparkles & Gold Dust Particles System */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
-        {[...Array(15)].map((_, i) => (
+        {[...Array(5)].map((_, i) => ( // Reduced from 8 to 5 particles for better performance
           <motion.div
             key={i}
-            initial={{ 
-              opacity: 0, 
-              y: '110vh', 
+            initial={{
+              opacity: 0,
+              y: '110vh',
               x: `${Math.random() * 100}%`,
               scale: Math.random() * 0.4 + 0.3
             }}
-            animate={{ 
+            animate={{
               opacity: [0, 0.45, 0.45, 0],
               y: '-10vh',
               x: [
-                `${Math.random() * 100}%`, 
+                `${Math.random() * 100}%`,
                 `${Math.random() * 100 + (Math.random() * 10 - 5)}%`,
                 `${Math.random() * 100 + (Math.random() * 20 - 10)}%`
               ]
             }}
             transition={{
-              duration: Math.random() * 18 + 12,
+              duration: Math.random() * 25 + 20, // Further increased duration for even less CPU usage
               repeat: Infinity,
               ease: "linear",
               delay: Math.random() * -15
@@ -166,7 +162,7 @@ export default function Hero() {
 
       {/* Floating background texture */}
       <motion.div
-        style={{ y: yBg2, opacity: opacityFade, willChange: 'transform' }}
+        style={{ opacity: opacityFade }}
         className="absolute inset-0 opacity-[0.03] pointer-events-none z-0"
       >
         <div className="absolute top-[30%] right-[15%] w-72 h-72 border border-gold/10 rounded-full blur-2xl"></div>
@@ -177,24 +173,23 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Text Content */}
-          <motion.div 
-            style={{ y: yText, willChange: 'transform' }}
+          <motion.div
             className="lg:col-span-6 flex flex-col justify-center text-center lg:text-left space-y-6"
           >
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="inline-flex items-center justify-center lg:justify-start space-x-2 text-gold tracking-[0.25em] text-xs uppercase"
             >
-              <Sparkles className="h-4 w-4 text-gold animate-spin" style={{ animationDuration: '6s' }} />
+              <Sparkles className="h-4 w-4 text-gold" />
               <span className="font-mono">Purity • Legacy • Opulence</span>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               className="space-y-2"
             >
               <h1 className="font-serif font-black text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-white tracking-wide">
@@ -208,7 +203,7 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="font-serif italic text-base sm:text-lg text-cream/95 font-light"
             >
               "Experience Timeless Elegance in Every Drop"
@@ -217,7 +212,7 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="text-cream/70 max-w-lg mx-auto lg:mx-0 text-xs sm:text-sm leading-relaxed font-light"
             >
               Discover elite, hand-crafted rich traditional Indian Attars and premium designer-inspired perfume sprays (10ml & 30ml). Highly concentrated pure oils and long-lasting alternative sprays meticulously curated to wrap you in a royal aura.
@@ -227,7 +222,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9, delay: 0.7 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
               className="p-4 bg-neutral-950/60 backdrop-blur-md border border-gold/15 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between max-w-xl mx-auto lg:mx-0 rounded-none shadow-[0_4px_25px_rgba(0,0,0,0.4)]"
             >
               <div>
@@ -250,7 +245,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2"
             >
               <a
@@ -272,8 +267,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Interactive Premium Attar Showcase Box */}
-          <motion.div 
-            style={{ y: yImage, willChange: 'transform' }}
+          <motion.div
             className="lg:col-span-6 flex flex-col items-center justify-center relative w-full"
           >
             {/* The Main Showcase Card */}
@@ -295,6 +289,7 @@ export default function Hero() {
                       key={activeAttar.id}
                       src={activeAttar.image}
                       alt={activeAttar.name}
+                      loading="lazy"
                       initial={{ opacity: 0, scale: 1.05 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}

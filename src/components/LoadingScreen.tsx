@@ -7,7 +7,7 @@ export default function LoadingScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false);
-    }, 600);
+    }, 250); // Reduced from 400ms to 250ms for faster initial load
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,8 +35,9 @@ export default function LoadingScreen() {
             >
               <div className="loader-logo-wrapper">
                 <img
-                  src="/src/assets/images/aone_official_logo_1779446749622.png"
+                  src="/images/aone_official_logo_1779446749622.png"
                   alt="A ONE LUXURY FRAGRANCE"
+                  loading="eager"
                   className="loader-logo-img"
                   referrerPolicy="no-referrer"
                 />
