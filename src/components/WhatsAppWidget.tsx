@@ -4,7 +4,7 @@ export default function WhatsAppWidget() {
   const handleSendMessage = () => {
     const text = "Hi! I want to visit your store and enquire about attars";
     const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/917799020387?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918142979518?text=${encoded}`, '_blank');
   };
 
   return (

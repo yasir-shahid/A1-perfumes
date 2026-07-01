@@ -302,13 +302,13 @@ export default function OrderForm({ selectedAttarName, setSelectedAttarName }: O
                     )}
                   </div>
 
-                  {/* Visit Date & Time Picker */}
+                  {/* Visit Date Picker */}
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest text-gold text-left block font-mono">
-                      Preferred Visit Date & Time <span className="text-rose-500">*</span>
+                      Preferred Visit Date <span className="text-rose-500">*</span>
                     </label>
                     <input
-                      type="datetime-local"
+                      type="date"
                       name="visitDate"
                       value={formData.visitDate}
                       onChange={handleChange}

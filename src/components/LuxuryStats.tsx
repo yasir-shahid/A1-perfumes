@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Award, Heart, Globe, Flame } from 'lucide-react';
+import { Heart, Globe, Flame } from 'lucide-react';
 
 export default function LuxuryStats() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,12 +12,6 @@ export default function LuxuryStats() {
   const yGlow = useTransform(scrollYProgress, [0, 1], [-80, 80]);
 
   const stats = [
-    {
-      icon: <Award className="h-6 w-6 text-gold" />,
-      number: '10+',
-      label: 'Years Heritage',
-      description: 'Preserving raw traditional distilling heritage since 2016.'
-    },
     {
       icon: <Heart className="h-6 w-6 text-gold" />,
       number: '5,000+',

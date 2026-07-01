@@ -64,8 +64,8 @@ export default function Footer() {
             <MessageSquare className="h-4 w-4" />
           </a>
           <a
-            href="tel:+917799020387"
-            aria-label="Phone Line"
+            href="tel:+918142979518"
+            aria-label="Phone Line 2"
             className="p-2 border border-gold/10 hover:border-gold hover:bg-gold/10 text-cream hover:text-gold transition-all"
           >
             <Phone className="h-4 w-4" />

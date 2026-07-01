@@ -243,14 +243,17 @@ export default function AttarCollection({ onSelectAttar }: CollectionProps) {
                   </div>
 
                   {/* Purchase Link Option */}
-                  <div className="mt-8">
+                  <div className="mt-8 space-y-3">
                     <button
                       onClick={() => onSelectAttar(attar.name)}
                       className="w-full bg-transparent hover:bg-gold border border-gold/30 hover:border-gold text-gold hover:text-black py-3 px-4 rounded-none text-[9px] tracking-[0.25em] font-mono uppercase font-semibold transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
                     >
                       <Compass className="h-3.5 w-3.5" />
-                      <span>Select to Reserve / Purchase</span>
+                      <span>BUY NOW</span>
                     </button>
+                    <p className="text-center text-[10px] text-cream/50 font-light leading-relaxed">
+                      Place your order via WhatsApp Live Chat or book a personalized perfume consultation with our experts.
+                    </p>
                   </div>
 
                 </motion.div>
