@@ -85,7 +85,7 @@ A-ONE-LUXURY-FRAGRANCE
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/A1-perfumes.git
+[git clone https://github.com/yasir-shahid/A1-perfumes.git]
 ```
 
 Move into the project
