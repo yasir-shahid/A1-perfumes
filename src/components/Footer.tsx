@@ -64,8 +64,8 @@ export default function Footer() {
             <MessageSquare className="h-4 w-4" />
           </a>
           <a
-            href="tel:+918142979518"
-            aria-label="Phone Line 2"
+            href="tel:+917799020387"
+            aria-label="Phone Line"
             className="p-2 border border-gold/10 hover:border-gold hover:bg-gold/10 text-cream hover:text-gold transition-all"
           >
             <Phone className="h-4 w-4" />
@@ -95,7 +95,7 @@ export default function Footer() {
             &copy; {currentYear} A-ONE LUXURY FRAGRANCE. All Rights Reserved.
           </p>
           <p className="text-[9px] text-gold/50 font-light tracking-wide italic">
-             Traditional Attars of Indian Heritage • Base: A-1 Luxury Paints Store, MLG Road, Nalgonda - 508001
+             Traditional Attars of Indian Heritage • Base: A-1 Luxury Fragrance Store, MLG Road, Nalgonda - 508001
           </p>
         </div>
 

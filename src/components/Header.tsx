@@ -78,7 +78,7 @@ export default function Header() {
           {/* Call to Action WhatsApp */}
           <div className="hidden sm:flex items-center">
             <a
-              href="https://wa.me/918142979518?text=Hello%20A%20ONE%20Luxury%20Fragrance%20team,%20I%20am%20interested%20in%20your%20attars."
+              href="https://wa.me/917799020387?text=Hello%20A%20ONE%20Luxury%20Fragrance%20team,%20I%20am%20interested%20in%20your%20attars."
               target="_blank"
               rel="noopener noreferrer"
               id="header-whatsapp-cta"
@@ -117,7 +117,7 @@ export default function Header() {
             ))}
             <div className="pt-4 px-4">
               <a
-                href="https://wa.me/918142979518?text=Hello%20A%20ONE%20Luxury%20Fragrance,%20I%20would%20like%20to%20inquire%20about%20your%20premium%20collection."
+                href="https://wa.me/917799020387?text=Hello%20A%20ONE%20Luxury%20Fragrance,%20I%20would%20like%20to%20inquire%20about%20your%20premium%20collection."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 py-3 bg-gold hover:bg-gold-light text-black uppercase tracking-widest text-xs font-semibold transition-all duration-200"

@@ -70,7 +70,7 @@ export default function LoadingScreen() {
           </div>
 
           <div className="absolute bottom-12 text-[9px] font-mono tracking-widest text-[#D4AF37]/40 uppercase pointer-events-none">
-            A-1 Luxury Paints Store, MLG Road, Nalgonda
+            A-1 Luxury Fragrance Store, MLG Road, Nalgonda
           </div>
         </motion.div>
       )}

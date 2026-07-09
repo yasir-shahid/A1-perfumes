@@ -156,13 +156,12 @@ export default function AttarCollection({ onSelectAttar }: CollectionProps) {
         </div>
 
         {/* 3. GRID OF PREMIUM CARDS */}
-        <AnimatePresence mode="wait">
           {filteredAttars.length > 0 ? (
             <motion.div
+              key={`${selectedCategory}-${searchQuery}`}
               variants={containerVariants}
               initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-100px" }}
+              animate="show"
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
             >
               {filteredAttars.map((attar: FullCatalogAttar) => (
@@ -264,7 +263,6 @@ export default function AttarCollection({ onSelectAttar }: CollectionProps) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
               className="text-center py-20 border border-gold/10 bg-neutral-950/40 backdrop-blur-md max-w-xl mx-auto"
             >
               <Sparkles className="h-10 w-10 text-gold/40 mx-auto mb-4 animate-pulse" />
@@ -283,7 +281,6 @@ export default function AttarCollection({ onSelectAttar }: CollectionProps) {
               </button>
             </motion.div>
           )}
-        </AnimatePresence>
 
         {/* 5. PRICE DISCLAIMER FOOTER */}
         <div className="mt-16 text-center max-w-3xl mx-auto">

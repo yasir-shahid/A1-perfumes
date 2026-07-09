@@ -15,7 +15,7 @@ export default function Contact() {
 
   const storeInfo = {
     name: 'A-ONE LUXURY FRAGRANCE',
-    address: 'A-1 Luxury Paints Store, MLG Road, Nalgonda - 508001, Telangana, India',
+    address: 'A-1 Luxury Fragrance Store, MLG Road, Nalgonda - 508001, Telangana, India',
     phone: '+91 77990 20387 / +91 81429 79518',
     email: 'info@aoneluxuryfragrance.com',
     hours: '11:00 AM - 10:30 PM (Daily)',
@@ -119,7 +119,7 @@ export default function Contact() {
             {/* Live Chat triggers */}
             <div className="pt-6 border-t border-gold/10">
               <a
-                href="https://wa.me/918142979518?text=Hello!%20I%20am%20calling%20from%20A-ONE%20Luxury%20Fragrance%20website%20and%20want%20to%20visit%20your%20store."
+                href="https://wa.me/917799020387?text=Hello!%20I%20am%20calling%20from%20A-ONE%20Luxury%20Fragrance%20website%20and%20want%20to%20visit%20your%20store."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold text-xs tracking-widest uppercase py-3 transition-all"
