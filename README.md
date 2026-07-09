@@ -85,13 +85,13 @@ A-ONE-LUXURY-FRAGRANCE
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/A1-persumes.git
+git clone https://github.com/YOUR_USERNAME/A1-perfumes.git
 ```
 
 Move into the project
 
 ```bash
-cd A1-persumes
+cd A1-perfumes
 ```
 
 Install dependencies
